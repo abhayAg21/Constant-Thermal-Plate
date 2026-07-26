@@ -1,42 +1,100 @@
 # Adaptive Thermal Management System using ANSYS & MATLAB
 
-## Project Overview
+<p align="center">
+  <img src="Images/Workflow.png" width="700">
+</p>
 
-This project presents an **Adaptive Thermal Management System (ATMS)** designed to maintain an aluminium plate at a constant operating temperature of **35°C** under varying external heat loads (0–120 W).
-
-The project combines **CAD modeling, Finite Element Analysis (FEA), Design of Experiments (DOE), Response Surface Optimization, and MATLAB-based control engineering** to develop an intelligent heating and cooling strategy suitable for future Electric Vehicle (EV) battery thermal management systems and electronic cooling applications.
-
----
-
-## Problem Statement
-
-Electronic devices and EV battery packs experience continuously changing thermal loads during operation. Conventional cooling systems operate at fixed fan speeds and cannot maintain a constant operating temperature efficiently.
-
-This project proposes an adaptive solution that automatically switches between:
-
-- Heating Mode (Low Heat Load)
-- Cooling Mode (High Heat Load)
-
-to maintain the plate temperature near **35°C**.
+<p align="center">
+<b>Complete Design → Simulation → Optimization → MATLAB Controller Development</b>
+</p>
 
 ---
 
-## Key Features
+# Adaptive Thermal Management System (ATMS)
+
+An intelligent thermal management system designed to maintain an aluminium plate at **35°C** under varying external heat loads using **ANSYS Workbench**, **Design of Experiments (DOE)**, **Response Surface Optimization**, and a **MATLAB-based adaptive controller**.
+
+The project demonstrates how simulation-driven optimization can be combined with adaptive control strategies to develop a future-ready thermal management solution suitable for **Electric Vehicle Battery Packs**, **Power Electronics**, and **Electronic Cooling Systems**.
+
+---
+
+# Project Overview
+
+Maintaining a constant operating temperature is essential for improving the performance, reliability, and lifetime of electronic systems. Conventional cooling methods operate at fixed fan speeds and often fail to provide efficient thermal regulation under varying thermal loads.
+
+This project proposes an **Adaptive Thermal Management System (ATMS)** capable of automatically switching between:
+
+- 🔥 Heating Mode (Low Heat Load)
+- ❄️ Cooling Mode (High Heat Load)
+
+to maintain the aluminium plate near the desired operating temperature of **35°C**.
+
+---
+
+# Project Workflow
+
+```
+SolidWorks CAD Design
+        │
+        ▼
+ANSYS Steady-State Thermal Analysis
+        │
+        ▼
+Parameter Set
+        │
+        ▼
+Design of Experiments (DOE)
+        │
+        ▼
+Response Surface Generation
+        │
+        ▼
+Parameter Correlation
+        │
+        ▼
+Response Surface Optimization
+        │
+        ▼
+MATLAB Controller Development
+        │
+        ▼
+Adaptive Thermal Management System
+```
+
+---
+
+# Key Features
 
 - Adaptive Heating and Cooling Strategy
 - Serpentine Heater Design
 - Optimized Cooling Fin Geometry
-- ANSYS Steady-State Thermal Analysis
+- Steady-State Thermal Analysis
 - Design of Experiments (DOE)
-- Response Surface Generation
+- Response Surface Methodology
+- Parameter Correlation Analysis
 - Response Surface Optimization
-- MATLAB Controller Development
-- Fan RPM Prediction
+- MATLAB Adaptive Controller
+- Automatic Fan RPM Prediction
+- Temperature-Time Data Analysis
 - Future Hardware Implementation Ready
 
 ---
 
-## Software Used
+# Problem Statement
+
+Electronic devices and EV battery systems experience continuously changing thermal loads during operation.
+
+A conventional cooling system:
+
+- Operates at fixed fan speed
+- Consumes unnecessary power
+- Cannot maintain constant operating temperature
+
+The proposed Adaptive Thermal Management System automatically determines the required cooling capacity and heating requirement based on the external heat load.
+
+---
+
+# Software Used
 
 - SolidWorks
 - ANSYS Workbench
@@ -46,72 +104,99 @@ to maintain the plate temperature near **35°C**.
 
 ---
 
-## Methodology
+# ANSYS Optimization Workflow
 
-```
-SolidWorks Design
-        │
-        ▼
-ANSYS Geometry
-        │
-        ▼
-Steady-State Thermal Analysis
-        │
-        ▼
-Parameter Set
-        │
-        ▼
-Design of Experiments (DOE)
-        │
-        ▼
-Response Surface
-        │
-        ▼
-Response Surface Optimization
-        │
-        ▼
-MATLAB Controller
-        │
-        ▼
-Adaptive Heating & Cooling System
-```
+The optimization was performed using the following ANSYS workflow:
+
+1. Steady-State Thermal Analysis
+2. Parameter Set Creation
+3. Design of Experiments (DOE)
+4. Response Surface Generation
+5. Parameter Correlation Analysis
+6. Response Surface Optimization
+7. Mechanical Verification
+
+Using approximately **30 DOE design points**, a response surface was generated to establish the relationship between:
+
+- Heat Load
+- Convection Coefficient
+- Plate Temperature
+
+The optimized convection coefficient was then validated using ANSYS Mechanical.
 
 ---
 
-## Adaptive Control Strategy
+# MATLAB Controller Development
 
-### Heating Mode
+The MATLAB program performs the following tasks:
 
-- External Heat: **0–15 W**
-- Internal Heater: **15 W → 0 W**
-- Fan: OFF
-- Natural Convection: **8 W/m²·K**
+- Imports optimized ANSYS data
+- Uses PCHIP interpolation
+- Predicts required convection coefficient
+- Calculates adaptive fan speed
+- Implements adaptive heating strategy
+- Analyses Temperature-Time datasets
+- Generates engineering plots
 
-### Cooling Mode
+Generated outputs include:
 
-- External Heat: **15–120 W**
-- Heater: OFF
-- Fan Speed: Variable
-- Convection Coefficient: Obtained from ANSYS Optimization
+- Heat Load vs Convection Coefficient
+- Heat Load vs Fan RPM
+- Adaptive Heating & Cooling Strategy
+- Temperature vs Time Analysis
+- Reference vs Adaptive System Comparison
 
 ---
 
-## Engineering Concepts Used
+# Adaptive Control Strategy
+
+## Heating Mode
+
+External Heat Load:
+
+**0 – 15 W**
+
+Controller Action:
+
+- Heater ON
+- Fan OFF
+- Natural Convection
+
+---
+
+## Cooling Mode
+
+External Heat Load:
+
+**15 – 120 W**
+
+Controller Action:
+
+- Heater OFF
+- Variable Fan Speed
+- Adaptive Convection Coefficient
+
+The required convection coefficient is obtained directly from ANSYS Response Surface Optimization.
+
+---
+
+# Engineering Concepts Used
 
 - Heat Conduction
-- Forced Convection
 - Natural Convection
+- Forced Convection
 - Newton's Law of Cooling
 - Fourier's Law
 - Thermal Resistance
 - Finite Element Analysis
 - Design Optimization
 - Response Surface Methodology
-- Control Engineering
+- Adaptive Thermal Control
+- MATLAB Programming
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```
 Adaptive-Thermal-Management-System/
@@ -126,81 +211,123 @@ Adaptive-Thermal-Management-System/
 │   ├── DOE
 │   ├── Response Surface
 │   ├── Optimization
-│   └── Results
+│   └── Validation
 │
 ├── MATLAB/
-│   ├── Controller
+│   ├── Adaptive Controller
 │   ├── Fan RPM Prediction
+│   ├── Temperature Analysis
 │   └── Graph Generation
 │
 ├── Images/
+│   ├── Workflow.png
 │   ├── CAD Models
 │   ├── Temperature Contours
-│   ├── Heat Flux
-│   ├── DOE Table
-│   └── Response Surface
+│   ├── DOE
+│   ├── Response Surface
+│   ├── Optimization
+│   └── MATLAB Graphs
 │
 ├── Report/
-│   └── Final Project Report.pdf
+│   └── Final Report.pdf
 │
 └── README.md
 ```
 
 ---
 
-## Results
+# Results
 
-- Maintained plate temperature near **35°C**
-- Reduced computational effort using DOE
-- Developed an adaptive thermal controller
-- Optimized convection coefficient using Response Surface Optimization
-- Predicted practical BLDC fan speed using MATLAB
+The proposed Adaptive Thermal Management System successfully:
 
----
-
-## Future Scope
-
-- CFD-based airflow analysis
-- Real-time hardware implementation
-- ESP32/Arduino integration
-- PWM-controlled BLDC fan
-- Temperature sensor feedback
-- IoT-based monitoring
-- Machine Learning-based thermal prediction
+- Maintained the aluminium plate near **35°C**
+- Reduced optimization time using DOE
+- Generated a Response Surface model
+- Predicted the required convection coefficient
+- Developed an adaptive MATLAB controller
+- Predicted practical BLDC fan speed
+- Analysed transient temperature response
+- Demonstrated future hardware feasibility
 
 ---
 
-## Applications
+# Future Hardware Implementation
 
-- Electric Vehicle Battery Thermal Management
+The developed MATLAB algorithm can be deployed on embedded hardware using:
+
+- ESP32
+- Arduino Mega
+- STM32
+
+Hardware Components:
+
+- Temperature Sensor
+- PWM BLDC Fan
+- Serpentine Heater
+- Heater Driver
+- PWM Fan Driver
+
+This enables real-time adaptive thermal management.
+
+---
+
+# Future Scope
+
+- CFD Airflow Analysis
+- Experimental Validation
+- Real-Time Embedded Controller
+- IoT Monitoring
+- Wireless Temperature Monitoring
+- Machine Learning Thermal Prediction
+- Digital Twin Integration
+
+---
+
+# Applications
+
+- Electric Vehicle Battery Packs
 - Battery Energy Storage Systems
 - Power Electronics Cooling
-- Embedded Electronics
-- LED Cooling Systems
+- LED Cooling
+- Embedded Systems
 - Aerospace Electronics
 - Industrial Thermal Management
 
 ---
 
-## Contributors
+# Contributors
 
-- **Abhay Agrahari**
-- **Abhik Dixit**
+**Abhay Agrahari**
+
+**Abhik Dixit**
 
 ---
 
-## License
+# License
 
 This project is released under the **MIT License**.
 
-Feel free to use, modify, and contribute to this project for educational and research purposes.
+Feel free to use, modify, and contribute for educational and research purposes.
 
 ---
 
-## Acknowledgements
+# Acknowledgements
 
-We sincerely thank our faculty members and mentors for their valuable guidance throughout this project. We also acknowledge the use of **ANSYS Workbench**, **MATLAB**, and **SolidWorks** as the primary tools for design, simulation, optimization, and controller development.
+The authors sincerely thank their faculty members and mentors for their valuable guidance throughout this project.
+
+Special acknowledgement is extended to:
+
+- ANSYS Workbench
+- ANSYS Mechanical
+- MATLAB
+- SolidWorks
+
+for providing the engineering tools required for design, simulation, optimization, and controller development.
 
 ---
 
-⭐ **If you found this project helpful, please consider giving this repository a Star!**
+<p align="center">
+
+⭐ **If you found this project useful, please consider giving it a Star!**
+
+</p>
