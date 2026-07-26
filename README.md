@@ -7,11 +7,7 @@
 <p align="center">
 <b>Complete Design → Simulation → Optimization → MATLAB Controller Development</b>
 </p>
-# Constant-Thermal-Plate
-# Adaptive Thermal Management System using ANSYS & MATLAB
----
-## Project Overview
-
+----
 This project presents an **Adaptive Thermal Management System (ATMS)** designed to maintain an aluminium plate at a constant operating temperature of **35°C** under varying external heat loads (0–120 W).
 
 The project combines **CAD modeling, Finite Element Analysis (FEA), Design of Experiments (DOE), Response Surface Optimization, and MATLAB-based control engineering** to develop an intelligent heating and cooling strategy suitable for future Electric Vehicle (EV) battery thermal management systems and electronic cooling applications.
