@@ -1,7 +1,7 @@
 # Adaptive Thermal Management System using ANSYS & MATLAB
 
 <p align="center">
-  <img src="Images/Workflow.png" width="700">
+  <img src="Images/workflow.png" width="700">
 </p>
 
 <p align="center">
@@ -195,43 +195,18 @@ The required convection coefficient is obtained directly from ANSYS Response Sur
 - MATLAB Programming
 
 ---
+## Repository Structure
 
-# Repository Structure
-
-```
+```text
 Adaptive-Thermal-Management-System/
 │
-├── SolidWorks/
-│   ├── Plate Assembly
-│   ├── Serpentine Heater
-│   └── Cooling Fins
-│
 ├── ANSYS/
-│   ├── Workbench Files
-│   ├── DOE
-│   ├── Response Surface
-│   ├── Optimization
-│   └── Validation
-│
 ├── MATLAB/
-│   ├── Adaptive Controller
-│   ├── Fan RPM Prediction
-│   ├── Temperature Analysis
-│   └── Graph Generation
-│
+├── SolidWorks/
 ├── Images/
-│   ├── Workflow.png
-│   ├── CAD Models
-│   ├── Temperature Contours
-│   ├── DOE
-│   ├── Response Surface
-│   ├── Optimization
-│   └── MATLAB Graphs
-│
 ├── Report/
-│   └── Final Report.pdf
-│
-└── README.md
+├── README.md
+└── LICENSE
 ```
 
 ---
