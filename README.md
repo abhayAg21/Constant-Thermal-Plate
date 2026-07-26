@@ -24,8 +24,8 @@ Maintaining a constant operating temperature is essential for improving the perf
 
 This project proposes an **Adaptive Thermal Management System (ATMS)** capable of automatically switching between:
 
-- 🔥 Heating Mode (Low Heat Load)
-- ❄️ Cooling Mode (High Heat Load)
+-  Heating Mode (Low Heat Load)
+-  Cooling Mode (High Heat Load)
 
 to maintain the aluminium plate near the desired operating temperature of **35°C**.
 
