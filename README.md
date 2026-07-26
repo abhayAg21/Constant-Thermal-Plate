@@ -116,42 +116,19 @@ Adaptive Heating & Cooling System
 - Control Engineering
 
 ---
-
 ## Repository Structure
 
-```
+```text
 Adaptive-Thermal-Management-System/
 │
-├── SolidWorks/
-│   ├── Plate Assembly
-│   ├── Serpentine Heater
-│   └── Cooling Fins
-│
 ├── ANSYS/
-│   ├── Workbench Files
-│   ├── DOE
-│   ├── Response Surface
-│   ├── Optimization
-│   └── Results
-│
 ├── MATLAB/
-│   ├── Controller
-│   ├── Fan RPM Prediction
-│   └── Graph Generation
-│
+├── SolidWorks/
 ├── Images/
-│   ├── CAD Models
-│   ├── Temperature Contours
-│   ├── Heat Flux
-│   ├── DOE Table
-│   └── Response Surface
-│
 ├── Report/
-│   └── Final Project Report.pdf
-│
-└── README.md
+├── README.md
+└── LICENSE
 ```
-
 ---
 
 ## Results
